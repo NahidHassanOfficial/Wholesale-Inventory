@@ -4,7 +4,7 @@ import { Head } from "@inertiajs/vue3";
 <template>
 
     <Head>
-        <title>FreshCart - Online Grocery Shopping Platform</title>
+        <title>KANBAN | Dashboard</title>
     </Head>
 
 

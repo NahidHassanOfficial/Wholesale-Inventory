@@ -7,7 +7,11 @@ import MasterLayout from "./Pages/Backend/Layouts/Master.vue";
 //import toast library
 import Toast, { useToast } from "vue-toastification";
 import "vue-toastification/dist/index.css";
-window.toast = useToast(); //initialize globally
+window.toast = useToast(); //initialize toast globally
+
+//import loader-animation
+import loader from "@/js/loading-overlay";
+window.loader = loader; //initialize loader globally
 
 createInertiaApp({
     resolve: (name) => {

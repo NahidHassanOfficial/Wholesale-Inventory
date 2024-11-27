@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 
 //Auth Pages
 Route::inertia('/login', 'Auth/Login')->name('login');
 Route::inertia('/register', 'Auth/Signup')->name('register');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //Home Page
 Route::redirect('/', '/dashboard')->name(name: 'index');
@@ -13,6 +15,6 @@ Route::redirect('/', '/dashboard')->name(name: 'index');
 Route::prefix('dashboard')->middleware([])
     ->group(function () {
 
-        Route::inertia('/', '')->name('dashboard');
+        Route::inertia('/', 'Backend/Dashboard')->name('dashboard');
 
     });
