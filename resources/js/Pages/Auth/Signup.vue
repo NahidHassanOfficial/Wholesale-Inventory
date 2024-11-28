@@ -9,14 +9,14 @@ defineOptions({
 <template>
 
     <Head>
-        <title>Sign Up | Create Account</title>
+        <title>Sign Up | KANBAN</title>
     </Head>
 
     <section class="register flex flex-col items-center space-y-4">
         <div class="flex flex-col justify-center items-center mb-5 space-y-5">
-            <img :src="'/images/logo.svg'" alt="Brand Logo">
+            <img :src="'/images/logo.svg'" alt="Brand Logo" draggable="false">
             <div class="mt-5 text-center">
-                <h1 class=" text-2xl font-semibold text-gray-800">Create an account</h1>
+                <h1 class=" text-2xl font-semibold text-gray-800 dark:text-white">Create an account</h1>
                 <p class="text-gray-500">Start managing your business today</p>
             </div>
         </div>

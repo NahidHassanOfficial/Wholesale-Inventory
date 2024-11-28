@@ -14,10 +14,10 @@ defineOptions({
 
     <section class="login flex flex-col items-center space-y-4">
         <div class="flex flex-col justify-center items-center mb-5 space-y-5">
-            <img :src="'/images/logo.svg'" alt="Brand Logo">
+            <img :src="'/images/logo.svg'" alt="Brand Logo" draggable="false">
             <div class="mt-5 text-center">
-                <h1 class=" text-2xl font-semibold text-gray-800">Login to your account</h1>
-                <p class="text-gray-500">welcome back please enter you details</p>
+                <h1 class=" text-2xl font-semibold text-gray-800 dark:text-white">Login to your account</h1>
+                <p class="text-gray-500 ">welcome back please enter you details</p>
             </div>
         </div>
         <div class="mx-auto min-w-96 px-4 ">
