@@ -1,10 +1,12 @@
 <template>
-    <section class="card card-compact bg-base-100 shadow-xl">
+    <section class="col-span-1 card card-compact bg-base-100 shadow-xl">
         <div class="card-body">
             <h2 class="card-title">Inventory Summary</h2>
-            <div class="flex flex-flow flex-wrap gap-2 mt-1">
+            <div
+                class="flex flex-flow flex-wrap justify-center items-center md:px-10 mt-2"
+            >
                 <div
-                    class="grow flex flex-col justify-center gap-3 p-3 border-e border-gray-200"
+                    class="grow flex flex-col justify-center gap-6 px-6 py-4 md:border-e border-gray-200"
                 >
                     <img
                         :src="'/icons/colored/sales.svg'"
@@ -15,7 +17,7 @@
                         <span>Sales</span>
                     </p>
                 </div>
-                <div class="grow flex flex-col justify-center gap-3 px-6 py-2">
+                <div class="grow flex flex-col justify-center gap-6 px-6 py-4">
                     <img
                         :src="'/icons/colored/sales.svg'"
                         class="h-10 w-10 mx-auto"

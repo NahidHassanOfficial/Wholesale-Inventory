@@ -18,6 +18,8 @@
     "dependencies": {
         "@inertiajs/vue3": "^1.2.0",
         "@vitejs/plugin-vue": "^5.2.0",
-        "vue-toastification": "^2.0.0-rc.5"
+        "apexcharts": "^4.1.0",
+        "vue-toastification": "^2.0.0-rc.5",
+        "vue3-apexcharts": "^1.8.0"
     }
 }

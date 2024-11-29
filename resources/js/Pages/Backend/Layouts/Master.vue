@@ -48,7 +48,7 @@ onMounted(() => {
 
                 <div class="flex-1">
                     <label
-                        class="input input-bordered flex items-center gap-2 w-96"
+                        class="input input-bordered flex items-center gap-2 md:w-96"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +160,7 @@ onMounted(() => {
                 class="drawer-overlay"
             ></label>
             <ul
-                class="menu bg-base-200 min-h-full w-60 p-4 text-base-content text-base"
+                class="menu bg-base-200 min-h-full w-60 md:w-72 p-4 text-base-content text-base"
             >
                 <li>
                     <img
@@ -169,7 +169,10 @@ onMounted(() => {
                     />
                 </li>
                 <li>
-                    <Link href="/dashboard">
+                    <Link
+                        href="/dashboard"
+                        class="flex justify-start items-center gap-3"
+                    >
                         <span>
                             <img :src="'/icons/home.svg'" />
                         </span>
@@ -177,7 +180,10 @@ onMounted(() => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/inventory">
+                    <Link
+                        href="/inventory"
+                        class="flex justify-start items-center gap-3"
+                    >
                         <span>
                             <img :src="'/icons/sales.svg'" />
                         </span>
@@ -185,7 +191,10 @@ onMounted(() => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/reports">
+                    <Link
+                        href="/reports"
+                        class="flex justify-start items-center gap-3"
+                    >
                         <span>
                             <img :src="'/icons/statistics.svg'" />
                         </span>
@@ -193,7 +202,10 @@ onMounted(() => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/suppliers">
+                    <Link
+                        href="/suppliers"
+                        class="flex justify-start items-center gap-3"
+                    >
                         <span>
                             <img :src="'/icons/user.svg'" />
                         </span>
@@ -201,7 +213,10 @@ onMounted(() => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/orders">
+                    <Link
+                        href="/orders"
+                        class="flex justify-start items-center gap-3"
+                    >
                         <span>
                             <img :src="'/icons/bag.svg'" />
                         </span>
@@ -209,7 +224,10 @@ onMounted(() => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/stores">
+                    <Link
+                        href="/stores"
+                        class="flex justify-start items-center gap-3"
+                    >
                         <span>
                             <img :src="'/icons/list.svg'" />
                         </span>
