@@ -19,3 +19,4 @@ Route::prefix('dashboard')->middleware([])
 
     });
 Route::inertia('/reports', 'Backend/Reports')->name('reports');
+Route::inertia('/stores', 'Backend/ManageStore')->name('stores');
