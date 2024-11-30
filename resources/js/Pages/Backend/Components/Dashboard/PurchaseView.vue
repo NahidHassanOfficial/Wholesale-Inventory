@@ -3,7 +3,7 @@
         <div class="card-body">
             <h2 class="card-title">Purchase Overview</h2>
             <div
-                class="flex flex-flow flex-wrap justify-center items-center gap-2 md:px-10 mt-2"
+                class="flex flex-row flex-wrap justify-center items-center gap-2 md:px-10 mt-2"
             >
                 <div
                     class="grow flex flex-col justify-center gap-6 px-6 py-4 md:border-e border-gray-200"
