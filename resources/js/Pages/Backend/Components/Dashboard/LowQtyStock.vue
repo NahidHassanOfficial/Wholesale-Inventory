@@ -1,10 +1,14 @@
+<script setup>
+
+</script>
+
 <template>
     <section class="col-span-1 card card-compact bg-base-100 shadow-xl">
         <div class="card-body">
             <div class="flex justify-between items-center">
                 <h2 class="card-title">Low Quantity Stock</h2>
                 <Link href="#" class="text-primary hover:underline">
-                    See All
+                See All
                 </Link>
             </div>
 
@@ -15,9 +19,7 @@
                             <div class="flex items-center gap-4">
                                 <div class="avatar">
                                     <div class="mask h-14 w-14">
-                                        <img
-                                            :src="'/images/products/tata-salt.jpg'"
-                                        />
+                                        <img :src="'/images/products/tata-salt.jpg'" />
                                     </div>
                                 </div>
                                 <div>
@@ -29,9 +31,7 @@
                             </div>
                         </td>
                         <td>
-                            <p
-                                class="bg-red-200 w-fit text-red-800 text-sm px-2 py-0.5 rounded-full"
-                            >
+                            <p class="bg-red-200 w-fit text-red-800 text-sm px-2 py-0.5 rounded-full">
                                 Low
                             </p>
                         </td>
@@ -41,9 +41,7 @@
                             <div class="flex items-center gap-4">
                                 <div class="avatar">
                                     <div class="mask h-14 w-14">
-                                        <img
-                                            :src="'/images/products/tata-salt.jpg'"
-                                        />
+                                        <img :src="'/images/products/tata-salt.jpg'" />
                                     </div>
                                 </div>
                                 <div>
@@ -55,9 +53,7 @@
                             </div>
                         </td>
                         <td>
-                            <p
-                                class="bg-red-200 w-fit text-red-800 text-sm px-2 py-0.5 rounded-full"
-                            >
+                            <p class="bg-red-200 w-fit text-red-800 text-sm px-2 py-0.5 rounded-full">
                                 Low
                             </p>
                         </td>
@@ -67,9 +63,7 @@
                             <div class="flex items-center gap-4">
                                 <div class="avatar">
                                     <div class="mask h-14 w-14">
-                                        <img
-                                            :src="'/images/products/tata-salt.jpg'"
-                                        />
+                                        <img :src="'/images/products/tata-salt.jpg'" />
                                     </div>
                                 </div>
                                 <div>
@@ -81,9 +75,7 @@
                             </div>
                         </td>
                         <td>
-                            <p
-                                class="bg-red-200 w-fit text-red-800 text-sm px-2 py-0.5 rounded-full"
-                            >
+                            <p class="bg-red-200 w-fit text-red-800 text-sm px-2 py-0.5 rounded-full">
                                 Low
                             </p>
                         </td>

@@ -20,10 +20,7 @@ const seriesData = [
                 <h2 class="card-title">Sales & Purchase</h2>
                 <h2 class="flex items-center gap-2 border py-1 px-4 rounded-md">
                     <span>
-                        <img
-                            :src="'/icons/colored/sales.svg'"
-                            class="w-5 h-5"
-                        />
+                        <img :src="'/icons/colored/sales.svg'" class="w-5 h-5" />
                     </span>
                     <span>Weekly</span>
                 </h2>
