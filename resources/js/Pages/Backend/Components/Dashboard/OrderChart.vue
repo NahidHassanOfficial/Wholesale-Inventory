@@ -1,48 +1,16 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import ApexchartCard from "../Utilities/ApexchartCard.vue";
 
-const options = ref({});
-const series = ref([]);
-
-onMounted(() => {
-    options.value = {
-        chart: {
-            toolbar: {
-                show: false,
-            },
-        },
-        stroke: {
-            curve: "smooth",
-        },
-        xaxis: {
-            categories: [
-                "Jan",
-                "Feb",
-                "Mar",
-                "Apr",
-                "May",
-                "Jun",
-                "Jul",
-                "Aug",
-                "Sep",
-                "Oct",
-                "Nov",
-                "Dec",
-            ],
-        },
-    };
-
-    series.value = [
-        {
-            name: "Ordered",
-            data: [10, 15, 20, 25, 40, 35, 40, 45, 50, 55, 60, 65],
-        },
-        {
-            name: "Delivered",
-            data: [12, 18, 24, 30, 30, 42, 48, 54, 60, 66, 72, 65],
-        },
-    ];
-});
+const seriesData = [
+    {
+        name: "Ordered",
+        data: [10, 15, 20, 25, 40, 35, 40, 45, 50, 55, 60, 65],
+    },
+    {
+        name: "Delivered",
+        data: [12, 18, 24, 30, 30, 42, 48, 54, 60, 66, 72, 65],
+    },
+];
 </script>
 
 <template>
@@ -52,13 +20,7 @@ onMounted(() => {
                 <h2 class="card-title">Order Summary</h2>
             </div>
             <div class="mt-1 w-full h-full">
-                <apexchart
-                    type="line"
-                    height="100%"
-                    width="100%"
-                    :options="options"
-                    :series="series"
-                ></apexchart>
+                <ApexchartCard :type="'line'" :series="seriesData" />
             </div>
         </div>
     </section>
