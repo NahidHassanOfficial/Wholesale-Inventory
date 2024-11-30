@@ -20,8 +20,6 @@ Route::prefix('dashboard')->middleware([])
         Route::inertia('/reports', 'Backend/Reports')->name('reports');
         Route::inertia('/suppliers', 'Backend/Suppliers')->name('suppliers');
         Route::inertia('/orders', 'Backend/Orders')->name('orders');
-        Route::inertia('/stores', 'Backend/Stores')->name('stores');
+        Route::inertia('/stores', 'Backend/ManageStore')->name('stores');
 
     });
-Route::inertia('/reports', 'Backend/Reports')->name('reports');
-Route::inertia('/stores', 'Backend/ManageStore')->name('stores');
