@@ -16,6 +16,7 @@ Route::prefix('dashboard')->middleware([])
     ->group(function () {
 
         Route::inertia('/', 'Backend/Dashboard')->name('dashboard');
+        Route::inertia('/categories', 'Backend/Categories')->name('categories');
         Route::inertia('/inventory', 'Backend/Inventory')->name('inventory');
         Route::inertia('/reports', 'Backend/Reports')->name('reports');
         Route::inertia('/suppliers', 'Backend/Suppliers')->name('suppliers');

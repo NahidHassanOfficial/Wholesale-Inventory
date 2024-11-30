@@ -132,9 +132,18 @@ onMounted(() => {
                     <Link :href="route('dashboard')" class="flex justify-start items-center gap-5"
                         :class="{ 'text-blue-500': route().current('dashboard') }">
                     <span>
-                        <img :src="'/icons/home.svg'" class="stroke-[#3B82F6]" />
+                        <img :src="'/icons/home.svg'" />
                     </span>
                     <span>Dashboard</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link :href="route('categories')" class="flex justify-start items-center gap-5"
+                        :class="{ 'text-blue-500': route().current('categories') }">
+                    <span>
+                        <img :src="'/icons/list.svg'" />
+                    </span>
+                    <span>Categories</span>
                     </Link>
                 </li>
                 <li>
