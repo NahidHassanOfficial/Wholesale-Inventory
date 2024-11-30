@@ -1,10 +1,14 @@
+<script setup>
+
+</script>
+
 <template>
     <section class="col-span-2 card card-compact bg-base-100 shadow-xl">
         <div class="card-body">
             <div class="flex justify-between items-center">
                 <h2 class="card-title">Top Selling Stock</h2>
                 <Link href="#" class="text-primary hover:underline">
-                    See All
+                See All
                 </Link>
             </div>
 

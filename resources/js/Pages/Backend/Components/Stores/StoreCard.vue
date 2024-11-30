@@ -1,11 +1,8 @@
 <template>
-    <div
-        class="card card-side flex-col md:flex-row flex-warp bg-base-100 border overflow-hidden mb-5"
-    >
+    <div class="card card-side flex-col md:flex-row flex-warp bg-base-100 border overflow-hidden mb-5">
         <figure>
             <p
-                class="min-h-full h-32 w-60 flex justify-center items-center text-center bg-[#F0F1F3] text-[#48505e] text-base font-bold"
-            >
+                class="min-h-full h-32 w-60 flex justify-center items-center text-center bg-[#F0F1F3] text-[#48505e] text-base font-bold">
                 Singanallur Branch
             </p>
         </figure>
@@ -18,7 +15,7 @@
             </p>
         </div>
         <div class="card-actions justify-end m-5">
-            <button class="btn btn-outline px-10 text-primary">Edit</button>
+            <button class="btn btn-outline px-10 text-blue-500">Edit</button>
         </div>
     </div>
 </template>
