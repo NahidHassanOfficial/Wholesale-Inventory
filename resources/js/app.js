@@ -13,6 +13,8 @@ window.toast = useToast(); //initialize toast globally
 import loader from "@/js/loading-overlay";
 window.loader = loader; //initialize loader globally
 
+import VueApexCharts from "vue3-apexcharts";
+
 createInertiaApp({
     resolve: (name) => {
         const pages = import.meta.glob("./Pages/**/*.vue", { eager: true });
@@ -40,6 +42,7 @@ createInertiaApp({
                 newestOnTop: true,
             })
             .component("Link", Link)
+            .use(VueApexCharts)
             .mount(el);
     },
     progress: {
