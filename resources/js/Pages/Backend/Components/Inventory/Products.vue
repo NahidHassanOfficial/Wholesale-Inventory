@@ -17,17 +17,20 @@ function productView(id) {
                 <button class="btn bg-blue-500 hover:bg-blue-400 text-white" onclick="addProduct.showModal()">
                     Add Product
                 </button>
-                <details class="dropdown">
-                    <summary tabindex="0" class="btn m-1 bg-transparent text-gray-500 border-2 flex p-3 space-x-3">
-                        <img :src="'/icons/filter.svg'" alt="">
-                        <h1>Filter</h1>
-                    </summary>
-                    <ul tabindex="0" class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
-                    </ul>
-                </details>
-                <button class="btn bg-transparent text-gray-500 border-2">Download All</button>
+                <div
+                    class="relative border-2 pe-1 border-base-200 rounded-lg hover:bg-base-300 hover:border-base-200 cursor-pointer bgSelector">
+                    <img :src="'/icons/filter.svg'"
+                        class="h-5 w-5 absolute top-1/2 left-2 transform -translate-y-1/2" />
+                    <select
+                        class="bg-transparent ms-6 h-full w-fit px-2 focus:outline-none focus:border-none text-gray-500 bgSelect">
+                        <option disabled selected>Filter</option>
+                        <option>Han Solo</option>
+                        <option>Greedo</option>
+                    </select>
+                </div>
+                <button class="btn bg-transparent text-gray-500 border-2">
+                    Download All
+                </button>
             </div>
 
             <!-- Mobile dropdown menu - shown only on mobile -->
@@ -42,20 +45,24 @@ function productView(id) {
                         </svg>
                     </summary>
                     <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a class="text-gray-500 " onclick="addProduct.showModal()">Add Product</a></li>
                         <li>
-                            <details class="dropdown">
-                                <summary class=" bg-transparent text-gray-500 flex p-3 space-x-3">
-                                    <img :src="'/icons/filter.svg'" alt="">
-                                    <h1>Filter</h1>
-                                </summary>
-                                <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                                    <li><a>Item 1</a></li>
-                                    <li><a>Item 2</a></li>
-                                </ul>
-                            </details>
+                            <a class="text-gray-500" onclick="addProduct.showModal()">
+                                Add Product
+                            </a>
                         </li>
-                        <li><a class="text-gray-500 ">Download All</a></li>
+                        <li>
+                            <div class="w-fit p-0 pe-1 relative rounded-lg hover:bg-base-300 cursor-pointer bgSelector">
+                                <img :src="'/icons/filter.svg'"
+                                    class="h-5 w-5 absolute top-1/2 left-2 transform -translate-y-1/2" />
+                                <select
+                                    class="bg-transparent p-2 ms-7 h-full w-fit px-2 focus:outline-none focus:border-none text-gray-500 bgSelect">
+                                    <option disabled selected>Filter</option>
+                                    <option>Han Solo</option>
+                                    <option>Greedo</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li><a class="text-gray-500">Download All</a></li>
                     </ul>
                 </details>
             </div>
@@ -63,7 +70,6 @@ function productView(id) {
 
         <!-- Rest of your table code remains the same -->
         <div class="overflow-x-auto">
-
             <table class="table table-zebra">
                 <!-- head -->
                 <thead>

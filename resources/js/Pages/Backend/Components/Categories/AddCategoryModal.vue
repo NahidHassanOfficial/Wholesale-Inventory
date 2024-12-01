@@ -23,17 +23,6 @@
                         <label class="w-52 font-medium">Category Name</label>
                         <input type="text" placeholder="Enter product name" class="input input-bordered w-full" />
                     </div>
-
-                    <div class="flex justify-center items-center">
-                        <label class="w-52 font-medium">Supplier</label>
-                        <select class="select select-bordered w-full" placeholder="Select category">
-                            <option disabled selected>Select Supplier</option>
-                            <option value="electronics">Electronics</option>
-                            <option value="fashion">Fashion</option>
-                            <option value="groceries">Groceries</option>
-                            <option value="beauty">Beauty Categorys</option>
-                        </select>
-                    </div>
                 </div>
                 <div class="flex justify-end space-x-3">
                     <button class="btn bg-white text-gray-500"
