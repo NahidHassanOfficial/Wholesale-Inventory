@@ -1,7 +1,11 @@
 <script setup>
 import AddProductModal from './AddProductModal.vue';
+import ProductViewModal from './ProductViewModal.vue';
 import Badge from '../Badge.vue'
 
+function productView(id) {
+    document.getElementById(id).showModal();
+}
 </script>
 <template>
     <div class="w-full bg-base-100 p-5 rounded-lg shadow-sm">
@@ -76,7 +80,7 @@ import Badge from '../Badge.vue'
                     <!-- row 1 -->
                     <tr>
                         <th>1</th>
-                        <td>Cy Ganderton</td>
+                        <td @click="productView('productView')">Cy Ganderton</td>
                         <td>Quality Control Specialist</td>
                         <td>Blue</td>
                         <td>Quality Control Specialist</td>
@@ -86,7 +90,8 @@ import Badge from '../Badge.vue'
                     </tr>
                     <tr>
                         <th>1</th>
-                        <td>Cy Ganderton</td>
+                        <td @click="productView('productView')">Cy Ganderton</td>
+
                         <td>Quality Control Specialist</td>
                         <td>Blue</td>
                         <td>Quality Control Specialist</td>
@@ -96,7 +101,8 @@ import Badge from '../Badge.vue'
                     </tr>
                     <tr>
                         <th>1</th>
-                        <td>Cy Ganderton</td>
+                        <td @click="productView('productView')">Cy Ganderton</td>
+
                         <td>Quality Control Specialist</td>
                         <td>Blue</td>
                         <td>Quality Control Specialist</td>
@@ -106,7 +112,8 @@ import Badge from '../Badge.vue'
                     </tr>
                     <tr>
                         <th>1</th>
-                        <td>Cy Ganderton</td>
+                        <td @click="productView('productView')">Cy Ganderton</td>
+
                         <td>Quality Control Specialist</td>
                         <td>Blue</td>
                         <td>Quality Control Specialist</td>
@@ -116,7 +123,8 @@ import Badge from '../Badge.vue'
                     </tr>
                     <tr>
                         <th>1</th>
-                        <td>Cy Ganderton</td>
+                        <td @click="productView('productView')">Cy Ganderton</td>
+
                         <td>Quality Control Specialist</td>
                         <td>Blue</td>
                         <td>Quality Control Specialist</td>
@@ -126,7 +134,8 @@ import Badge from '../Badge.vue'
                     </tr>
                     <tr>
                         <th>1</th>
-                        <td>Cy Ganderton</td>
+                        <td @click="productView('productView')">Cy Ganderton</td>
+
                         <td>Quality Control Specialist</td>
                         <td>Blue</td>
                         <td>Quality Control Specialist</td>
@@ -140,5 +149,6 @@ import Badge from '../Badge.vue'
     </div>
 
     <AddProductModal />
+    <ProductViewModal />
 
 </template>
