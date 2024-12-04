@@ -22,5 +22,11 @@ Route::prefix('dashboard')->middleware([])
         Route::inertia('/suppliers', 'Backend/Suppliers')->name('suppliers');
         Route::inertia('/orders', 'Backend/Orders')->name('orders');
         Route::inertia('/stores', 'Backend/ManageStore')->name('stores');
-
     });
+
+
+
+
+// Backend
+Route::post('/register', [AuthController::class, "register"])->name('register.user');
+Route::post('/login', [AuthController::class, "login"])->name('login.user');
