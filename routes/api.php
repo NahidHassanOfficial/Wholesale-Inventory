@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\SupplierController;
 use App\Http\Middleware\AuthMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -12,5 +13,9 @@ Route::middleware([AuthMiddleware::class])->group(function () {
     Route::post('/category/create', [CategoryController::class, 'createCategory'])->name('category.create');
     Route::patch('/category/edit', [CategoryController::class, 'editCategory'])->name('category.update');
     Route::delete('/category/delete/{categoryId}', [CategoryController::class, 'deleteCategory'])->name('category.delete');
+
+    Route::post('/supplier/create', [SupplierController::class, 'createSupplier'])->name('supplier.create');
+    Route::post('/supplier/edit', [SupplierController::class, 'editSupplier'])->name('supplier.update');
+    Route::delete('/supplier/delete/{supplierId}', [SupplierController::class, 'deleteSupplier'])->name('supplier.delete');
 
 });
