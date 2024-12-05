@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\StoreController;
 use App\Http\Controllers\Backend\SupplierController;
@@ -28,4 +29,6 @@ Route::middleware([AuthMiddleware::class])->group(function () {
     Route::post('/product/edit', [ProductController::class, 'editProduct'])->name('product.update');
     Route::delete('/product/delete/{productId}', [ProductController::class, 'deleteProduct'])->name('product.delete');
 
+    Route::post('/create-order', [OrderController::class, 'createOrder'])->name('order.create');
+ 
 });
