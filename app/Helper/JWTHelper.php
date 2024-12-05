@@ -19,7 +19,6 @@ class JWTHelper
             'userId' => $userId,
             'role' => $role,
         ];
-        dd(JWT::encode($payload, $key, 'HS256'));
         return JWT::encode($payload, $key, 'HS256');
     }
 
