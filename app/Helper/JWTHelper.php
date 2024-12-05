@@ -19,13 +19,14 @@ class JWTHelper
             'userId' => $userId,
             'role' => $role,
         ];
+        dd(JWT::encode($payload, $key, 'HS256'));
         return JWT::encode($payload, $key, 'HS256');
     }
 
     public static function verifyToken($token)
     {
         try {
-            if ($token) {
+            if ($token == null) {
                 return 'unauthorized';
             } else {
                 $key = env('JWT_KEY');
