@@ -25,6 +25,11 @@ class Response
         return self::Out('failed', $msg, $data, $code);
     }
 
+    public static function validationError($data = null, $code = 422)
+    {
+        return self::Out('failed', "Request validation failed", $data, $code);
+    }
+
     public static function unauthorized($msg = "Unauthorized access", $data = null)
     {
         return self::Out('unauthorized', $msg, $data, 401);
