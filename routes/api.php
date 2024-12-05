@@ -30,4 +30,5 @@ Route::middleware([AuthMiddleware::class])->group(function () {
     Route::delete('/product/delete/{productId}', [ProductController::class, 'deleteProduct'])->name('product.delete');
 
     Route::post('/create-order', [OrderController::class, 'createOrder'])->name('order.create');
+ 
 });
