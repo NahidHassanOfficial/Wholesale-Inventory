@@ -17,6 +17,10 @@ return Application::configure(basePath: dirname(__DIR__))
             HandleInertiaRequests::class,
         ]);
 
+        $middleware->validateCsrfTokens(except: [
+            '/api/login',
+        ]);
+
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

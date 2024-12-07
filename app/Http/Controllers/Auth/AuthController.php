@@ -19,6 +19,7 @@ class AuthController extends Controller
                 'name' => 'required|between:4,20',
                 'email' => 'required|email|unique:users,email',
                 'phone' => 'required|digits:11|numeric',
+                'address' => 'required|string',
                 'password' => 'required|min:8',
             ]);
         } catch (ValidationException $e) {
@@ -57,15 +58,15 @@ class AuthController extends Controller
                 $time = time() + 60 * 60 * 24;
             }
             $token = JWTHelper::createToken($email, $user->id, 'user', $time);
-            return Response::success('Login Successful', ['token' => $token]);
+            return Response::success('Login Successful', ['token' => $token])->cookie('token', $token, $time);
         } else {
-            return Response::unauthorized();
+            return Response::unauthorized('Invalid Credentials');
         }
 
     }
 
     public function logout()
     {
-
+        return redirect(route('index'))->cookie('token', '', -1);
     }
 }

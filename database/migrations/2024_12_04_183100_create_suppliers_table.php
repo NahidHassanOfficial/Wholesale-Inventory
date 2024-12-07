@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('phone');
             $table->boolean('takes_return');
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
 
