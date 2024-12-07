@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Middleware\AuthMiddleware;
+use App\Http\Middleware\AuthRedirectMiddleware;
 use Illuminate\Support\Facades\Route;
 
 //Auth Pages
@@ -13,7 +13,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::redirect('/', '/dashboard')->name(name: 'index');
 
 //Dashboard Pages
-Route::prefix('dashboard')->middleware([AuthMiddleware::class])
+Route::prefix('dashboard')->middleware([AuthRedirectMiddleware::class])
     ->group(function () {
 
         Route::inertia('/', 'Backend/Dashboard')->name('dashboard');
