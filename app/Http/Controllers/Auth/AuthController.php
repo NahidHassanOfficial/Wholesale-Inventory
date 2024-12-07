@@ -58,6 +58,7 @@ class AuthController extends Controller
                 $time = time() + 60 * 60 * 24;
             }
             $token = JWTHelper::createToken($email, $user->id, 'user', $time);
+          
             return Response::success('Login Successful', ['token' => $token])->cookie('token', $token, $time);
         } else {
             return Response::unauthorized('Invalid Credentials');
