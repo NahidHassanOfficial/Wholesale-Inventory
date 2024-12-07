@@ -27,7 +27,7 @@ createInertiaApp({
             .use(plugin)
             .use(ZiggyVue)
             .use(Toast, {
-                position: "bottom-right",
+                position: "top-right",
                 timeout: 2500,
                 closeOnClick: true,
                 pauseOnFocusLoss: false,
@@ -37,7 +37,7 @@ createInertiaApp({
                 closeButton: "button",
                 icon: true,
                 rtl: false,
-                transition: "Vue-Toastification__slideBlurred",
+                transition: "Vue-Toastification__bounce",
                 maxToasts: 5,
                 newestOnTop: true,
             })
