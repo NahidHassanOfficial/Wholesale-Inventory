@@ -15,4 +15,29 @@ class User extends Model
         'password',
     ];
 
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
+
+    public function suppliers()
+    {
+        return $this->hasMany(Supplier::class);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
+    public function store()
+    {
+        return $this->hasMany(Store::class);
+    }
+
+    public function invoice()
+    {
+        return $this->hasMany(Invoice::class);
+    }
+
 }
