@@ -10,7 +10,7 @@ use App\Http\Middleware\AuthMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/register', [AuthController::class, 'register'])->name('user.register');
-Route::post('/login', [AuthController::class, 'login'])->name('user.login');
+Route::post('/login', [AuthController::class, 'login'])->name('user.login')->middleware(['web']);
 
 Route::middleware([AuthMiddleware::class])->group(function () {
     Route::post('/category/create', [CategoryController::class, 'createCategory'])->name('category.create');
@@ -30,5 +30,5 @@ Route::middleware([AuthMiddleware::class])->group(function () {
     Route::delete('/product/delete/{productId}', [ProductController::class, 'deleteProduct'])->name('product.delete');
 
     Route::post('/create-order', [OrderController::class, 'createOrder'])->name('order.create');
- 
+
 });

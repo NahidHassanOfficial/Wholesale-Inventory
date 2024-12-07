@@ -23,7 +23,7 @@ return new class extends Migration
             $table->decimal('selling_price', 10, 2);
             $table->date('expiry_date')->nullable();
             $table->integer('threshold_qty');
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }
