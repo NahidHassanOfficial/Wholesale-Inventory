@@ -5,8 +5,8 @@ use App\Http\Middleware\AuthRedirectMiddleware;
 use Illuminate\Support\Facades\Route;
 
 //Auth Pages
-Route::inertia('/login', 'Auth/Login')->name('login');
-Route::inertia('/register', 'Auth/Signup')->name('register');
+Route::inertia('/login', 'Auth/Login')->name('login')->middleware([AuthRedirectMiddleware::class]);
+Route::inertia('/register', 'Auth/Signup')->name('register')->middleware([AuthRedirectMiddleware::class]);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //Home Page
