@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            $table->foreignId('supplier_id')->constrained()->onDelete('cascade');
+            $table->foreignId('category_id')->constrained()->onDelete('restrict');
+            $table->foreignId('supplier_id')->constrained()->onDelete('restrict');
             $table->string('name');
             $table->integer('quantity');
             $table->string('unit');
@@ -25,6 +25,7 @@ return new class extends Migration
             $table->integer('threshold_qty');
             $table->string('image');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
