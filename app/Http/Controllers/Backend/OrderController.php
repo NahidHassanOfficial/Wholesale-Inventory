@@ -24,7 +24,6 @@ class OrderController extends Controller
         } catch (ValidationException $e) {
             return Response::validationError($e->errors());
         }
-
         $userId = request()->header('id');
         $storeId = request()->storeId;
         $orderItems = request()->orderItems;
@@ -51,8 +50,8 @@ class OrderController extends Controller
         DB::beginTransaction();
         try {
             $invoice = Invoice::create([
-                'store_id' => $storeId,
                 'user_id' => $userId,
+                'store_id' => $storeId,
                 'total' => $totalAmount,
                 'discount' => $discount,
                 'payable' => $totalAmount,
@@ -64,6 +63,7 @@ class OrderController extends Controller
 
             foreach ($orderItems as $item) {
                 InvoiceItem::create([
+                    'user_id' => $userId,
                     'invoice_id' => $invoice->id,
                     'product_id' => $item['id'],
                     'name' => $item['name'],
