@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('store_id')->constrained()->onDelete('restrict');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('store_id')->constrained()->onDelete('restrict');
             $table->decimal('total', 10, 2);
             $table->decimal('discount', 10, 2);
             $table->decimal('payable', 10, 2);

@@ -18,7 +18,7 @@ class CategoryController extends Controller
     {
         try {
             request()->validate([
-                'name' => 'required|unique:categories,name',
+                'name' => 'required|string',
             ]);
 
         } catch (ValidationException $e) {
@@ -39,7 +39,7 @@ class CategoryController extends Controller
         try {
             request()->validate([
                 'id' => 'required|exists:categories,id',
-                'name' => 'required|unique:categories,name,' . request('id'),
+                'name' => 'required|string',
             ]);
 
         } catch (ValidationException $e) {
