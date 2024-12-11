@@ -15,13 +15,13 @@ class AuthRedirectMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        $requestedRoute = $request->route()->getName();
         $token = $request->cookie('token');
         if (!$token) {
             $bearerToken = $request->header('Authorization');
             if (!$bearerToken) {
 
                 //if no token exist then let the request pass to next if route name matches
-                $requestedRoute = $request->route()->getName();
                 if ($requestedRoute == 'login' || $requestedRoute == 'register') {
                     return $next($request);
                 }
@@ -33,11 +33,14 @@ class AuthRedirectMiddleware
 
         $result = JWTHelper::verifyToken(token: $token);
         if ($result == "unauthorized") {
-            return redirect(route('login'));
+            if ($requestedRoute === 'login') {
+                return $next($request);
+            } else {
+                return redirect(route('login'));
+            }
         } else {
 
             //if current route equal to login or register then redirect to dashboard
-            $requestedRoute = $request->route()->getName();
             if ($requestedRoute == 'login' || $requestedRoute == 'register') {
                 return redirect(route('dashboard'));
             }
